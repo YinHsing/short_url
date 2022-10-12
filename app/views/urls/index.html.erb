@@ -10,7 +10,7 @@
     <tbody>
       <tr>
         <td><%= url.origin_url %></td>
-        <td><%= link_to "#{url.shorten_url}", url.origin_url %></td>
+        <td><%= "http://localhost:3000/urls/#{url.shorten_url}" %></td>
       </tr>
     </tbody>
   <% end %>

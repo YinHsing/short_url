@@ -16,8 +16,8 @@ class UrlsController < ApplicationController
     end 
   end
   def show
-    @url = Url.find(params[:id])
-
+    @url = Url.find_by(params[:shorten_url])
+    redirect_to @url.origin_url
   end
 
   private

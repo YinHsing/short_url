@@ -1,4 +1,6 @@
 class Url < ApplicationRecord
-  validates :url
-  validates :url, format: URI::regexp(%w[http https])
+  validates :origin_url, presence: true
+  
+  # validates :origin_url, format: { with: /(http|https):\/\/,
+  #   message: "only allows letters" }
 end
